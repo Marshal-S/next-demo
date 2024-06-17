@@ -1,4 +1,5 @@
 'use client';
+import Head from 'next/head';
 import { useRouter } from 'next/navigation';
 
 //CSR客户端渲染
@@ -11,16 +12,21 @@ export default function Home(props: any) {
     console.log('props', props);
 
     return (
-        <div className="home-bkg">
-            <div>我是home页面: 参数是{props.router}</div>
-            <div
-                onClick={() => {
-                    router.push('/');
-                }}
-            >
-                返回app
+        <>
+            <Head>
+                <title>home子标题akjsdhkfashkfahsdkjfhaskdjfhkasjd</title>
+            </Head>
+            <div className="home-bkg">
+                <div>我是home页面: 参数是{props.router}</div>
+                <div
+                    onClick={() => {
+                        router.push('/');
+                    }}
+                >
+                    返回app
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

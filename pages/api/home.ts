@@ -11,7 +11,7 @@ export default function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<ResponseData>
 ) {
-	console.log(req.query, req.cookies, req.method, req.body)
+	console.log(req.query, req.cookies, req.method, req.body, req.headers)
 	res.status(200).json({ code: 200, message: 'home接口访问成功了！' })
 	// res.redirect('/') //重定向到另一个url
 	// res.redirect(307, '/') //可以设置重定向状态status
